@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Blue Knit Shoulder Bag",
+      "slug": "blue-knit-shoulder-bag",
+      "category": "Accessories",
+      "occasions": ["casual", "everyday"],
+      "colors": ["blue", "white", "black", "grey", "brown", "green", "yellow"],
+      "price": 1500,
+      "currency": "KES",
+      "bestseller": false,
+      "images": ["/images/bag1.png"],
+      "sizes": [],
+      "inventory": {},
+      "description": "Handmade knit shoulder bag in blue with white bird motif."
+    },
+    {
+      "id": 2,
+      "name": "Maroon Knit Beanie",
+      "slug": "maroon-knit-beanie",
+      "category": "Accessories",
+      "occasions": ["casual", "winter"],
+      "colors": ["maroon", "white", "black", "grey", "brown", "blue", "green", "yellow"],
+      "price": 800,
+      "currency": "KES",
+      "bestseller": false,
+      "images": ["/images/bunnie1.png"],
+      "sizes": ["One Size"],
+      "inventory": { "One Size": 15 },
+      "description": "Warm ribbed knit beanie in maroon, perfect for cold days."
+    },
+    {
+      "id": 3,
+      "name": "Patchwork Cardigan",
+      "slug": "patchwork-cardigan",
+      "category": "Tops",
+      "occasions": ["casual", "everyday", "layering"],
+      "colors": ["purple", "white", "blue", "green", "yellow"],
+      "price": 3500,
+      "currency": "KES",
+      "bestseller": true,
+      "images": ["/images/Sweater.png"],
+      "sizes": ["S", "M", "L"],
+      "inventory": { "S": 5, "M": 7, "L": 4 },
+      "description": "Oversized crochet cardigan in purple and white patchwork."
+    }
+  ]
+}
