@@ -1,17 +1,22 @@
-const jsonServer = require("json-server");
-const cors = require("cors");
-const path = require("path");
+const jsonServer = require('json-server');
+const express = require('express');
+const path = require('path');
+
 const server = jsonServer.create();
-const router = jsonServer.router(path.join(__dirname, "db", "db.json"));
+
+// Point to db.json using an absolute path
+const dbFile = path.join(__dirname, 'db.json');             
+
+const router = jsonServer.router(dbFile);
 const middlewares = jsonServer.defaults();
 
-server.use(cors());
-server.use(jsonServer.bodyParser);
+// Serve your images folder (at repo root)
+server.use('/images', express.static(path.join(__dirname, 'images')));
+
 server.use(middlewares);
 server.use(router);
 
 const PORT = process.env.PORT || 3000;
-
 server.listen(PORT, () => {
-  console.log(`JSON Server is running on http://localhost:${PORT}`);
+  console.log(`JSON Server is running on ${PORT}`);
 });
