@@ -10,7 +10,7 @@
       "price": 1500,
       "currency": "KES",
       "bestseller": false,
-      "images": ["/images/bag1.png"],
+      "images": ["/images/bag1.jpg"],
       "sizes": [],
       "inventory": {},
       "description": "Handmade knit shoulder bag in blue with white bird motif."
@@ -25,7 +25,7 @@
       "price": 800,
       "currency": "KES",
       "bestseller": false,
-      "images": ["/images/bunnie1.png"],
+      "images": ["/images/bunnie1.jpg"],
       "sizes": ["One Size"],
       "inventory": { "One Size": 15 },
       "description": "Warm ribbed knit beanie in maroon, perfect for cold days."
@@ -40,7 +40,7 @@
       "price": 3500,
       "currency": "KES",
       "bestseller": true,
-      "images": ["/images/Sweater.png"],
+      "images": ["/images/Sweater.jpg"],
       "sizes": ["S", "M", "L"],
       "inventory": { "S": 5, "M": 7, "L": 4 },
       "description": "Oversized crochet cardigan in purple and white patchwork."
