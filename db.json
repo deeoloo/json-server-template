@@ -45,5 +45,13 @@
       "inventory": { "S": 5, "M": 7, "L": 4 },
       "description": "Oversized crochet cardigan in purple and white patchwork."
     }
-  ]
+  ],
+
+  "about": {
+    "title": "About YarnlyChic",
+    "hero": "/images/hero.jpg",
+    "yarnlychic": "/images/about.jpg",
+    "founder": "/images/founder.jpg",
+    "founderName": "Cherrylyn Chepkoech"
+  }
 }
