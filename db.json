@@ -53,5 +53,7 @@
     "yarnlychic": "/images/about.jpg",
     "founder": "/images/founder.jpg",
     "founderName": "Cherrylyn Chepkoech"
-  }
+  },
+
+  "orders":[]
 }
