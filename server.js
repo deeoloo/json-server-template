@@ -12,12 +12,18 @@ const router = jsonServer.router(path.join(__dirname, 'db.json'));
 const middlewares = jsonServer.defaults();
 
 // ---- Basic server & static assets ----
-server.use(cors());
+server.use(cors({
+  origin: '*',
+  methods: ['GET','POST','PUT','PATCH','DELETE'],
+  allowedHeaders: ['Content-Type','Authorization']
+}));
 server.use(express.json());
 server.use('/images', express.static(path.join(__dirname, 'images')));
 
-// health check
+// root + health check
+server.get('/', (_req, res) => res.send('OK'));
 server.get('/health', (_req, res) => res.json({ status: 'ok' }));
+
 
 
 const {
