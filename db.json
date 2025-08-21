@@ -44,6 +44,96 @@
       "sizes": ["S", "M", "L"],
       "inventory": { "S": 5, "M": 7, "L": 4 },
       "description": "Oversized crochet cardigan in purple and white patchwork."
+    },
+    {
+      "id": 4,
+      "name": "Crochet Baby Set",
+      "slug": "crochet-baby-set",
+      "category": "Kids",
+      "occasions": ["casual", "gift", "everyday"],
+      "colors": ["orange", "blue", "purple", "grey"],
+      "price": 2800,
+      "currency": "KES",
+      "bestseller": false,
+      "images": ["/images/babyset1.jpg"],
+      "sizes": ["0-6M", "6-12M"],
+      "inventory": { "0-6M": 8, "6-12M": 6 },
+      "description": "Handmade crochet baby set featuring a colorful patchwork cardigan and matching hat with bear ears."
+    },
+    {
+      "id": 5,
+      "name": "Colorful Baby Set",
+      "slug": "colorful-baby-set",
+      "category": "Kids",
+      "occasions": ["gift", "casual"],
+      "colors": ["orange", "blue", "purple", "grey"],
+      "price": 3000,
+      "currency": "KES",
+      "bestseller": false,
+      "images": ["/images/babyset1.jpg"],
+      "sizes": ["0-6M", "6-12M"],
+      "inventory": { "0-6M": 6, "6-12M": 5 },
+      "description": "Colorful handmade crochet baby cardigan with buttons and a matching cap."
+    },
+    {
+      "id": 6,
+      "name": "Patchwork Baby Outfit",
+      "slug": "patchwork-baby-outfit",
+      "category": "Kids",
+      "occasions": ["gift", "everyday"],
+      "colors": ["green", "yellow", "purple", "pink"],
+      "price": 3200,
+      "currency": "KES",
+      "bestseller": false,
+      "images": ["/images/babyset2.jpg"],
+      "sizes": ["0-6M", "6-12M"],
+      "inventory": { "0-6M": 5, "6-12M": 4 },
+      "description": "Bright patchwork crochet baby outfit with hat and fun playful motifs."
+    },
+    {
+      "id": 7,
+      "name": "Striped Crochet Hoodie",
+      "slug": "striped-crochet-hoodie",
+      "category": "Kids",
+      "occasions": ["casual", "gift"],
+      "colors": ["purple", "orange", "yellow"],
+      "price": 3500,
+      "currency": "KES",
+      "bestseller": false,
+      "images": ["/images/kidswoody.jpg"],
+      "sizes": ["2Y", "3Y", "4Y"],
+      "inventory": { "2Y": 4, "3Y": 3, "4Y": 2 },
+      "description": "Crochet hoodie in striped purple, white, yellow, and orange colors."
+    },
+    {
+      "id": 8,
+      "name": "Orange Crochet Dress & Hat",
+      "slug": "orange-crochet-dress-hat",
+      "category": "Dresses",
+      "occasions": ["runway", "summer"],
+      "colors": ["orange"],
+      "price": 6200,
+      "currency": "KES",
+      "bestseller": true,
+      "images": ["/images/dress1.jpg"],
+      "sizes": ["S", "M", "L"],
+      "inventory": { "S": 2, "M": 5, "L": 2 },
+      "description": "Bold orange crochet halter dress with matching bucket hat."
+    },
+    {
+      "id": 9,
+      "name": "Blue Star Crochet Set",
+      "slug": "blue-star-crochet-set",
+      "category": "Sets",
+      "occasions": ["runway", "summer", "festival"],
+      "colors": ["blue", "white"],
+      "price": 7000,
+      "currency": "KES",
+      "bestseller": true,
+      "images": ["/images/twopiece.jpg"],
+      "sizes": ["S", "M", "L"],
+      "inventory": { "S": 3, "M": 3, "L": 2 },
+      "description": "Blue crochet pants and crop top set with bold white star accents."
     }
   ],
 
@@ -52,8 +142,10 @@
     "hero": "/images/hero.jpg",
     "yarnlychic": "/images/about.jpg",
     "founder": "/images/founder.jpg",
+    "runway": "/images/runway1.jpg",
+    "halve": "/images/runway2.jpg",
     "founderName": "Cherrylyn Chepkoech"
   },
 
-  "orders":[]
+  "orders": []
 }
