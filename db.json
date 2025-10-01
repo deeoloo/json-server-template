@@ -5,12 +5,25 @@
       "name": "Blue Knit Shoulder Bag",
       "slug": "blue-knit-shoulder-bag",
       "category": "Accessories",
-      "occasions": ["casual", "everyday"],
-      "colors": ["blue", "white", "black", "grey", "brown", "green", "yellow"],
+      "occasions": [
+        "casual",
+        "everyday"
+      ],
+      "colors": [
+        "blue",
+        "white",
+        "black",
+        "grey",
+        "brown",
+        "green",
+        "yellow"
+      ],
       "price": 1500,
       "currency": "KES",
       "bestseller": false,
-      "images": ["/images/bag1.jpg"],
+      "images": [
+        "/images/bag1.jpg"
+      ],
       "sizes": [],
       "inventory": {},
       "description": "Handmade knit shoulder bag in blue with white bird motif."
@@ -20,14 +33,32 @@
       "name": "Maroon Knit Beanie",
       "slug": "maroon-knit-beanie",
       "category": "Accessories",
-      "occasions": ["casual", "winter"],
-      "colors": ["maroon", "white", "black", "grey", "brown", "blue", "green", "yellow"],
+      "occasions": [
+        "casual",
+        "winter"
+      ],
+      "colors": [
+        "maroon",
+        "white",
+        "black",
+        "grey",
+        "brown",
+        "blue",
+        "green",
+        "yellow"
+      ],
       "price": 800,
       "currency": "KES",
       "bestseller": false,
-      "images": ["/images/bunnie1.jpg"],
-      "sizes": ["One Size"],
-      "inventory": { "One Size": 15 },
+      "images": [
+        "/images/bunnie1.jpg"
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "inventory": {
+        "One Size": 15
+      },
       "description": "Warm ribbed knit beanie in maroon, perfect for cold days."
     },
     {
@@ -35,14 +66,34 @@
       "name": "Patchwork Cardigan",
       "slug": "patchwork-cardigan",
       "category": "Tops",
-      "occasions": ["casual", "everyday", "layering"],
-      "colors": ["purple", "white", "blue", "green", "yellow"],
+      "occasions": [
+        "casual",
+        "everyday",
+        "layering"
+      ],
+      "colors": [
+        "purple",
+        "white",
+        "blue",
+        "green",
+        "yellow"
+      ],
       "price": 3500,
       "currency": "KES",
       "bestseller": true,
-      "images": ["/images/Sweater.jpg"],
-      "sizes": ["S", "M", "L"],
-      "inventory": { "S": 5, "M": 7, "L": 4 },
+      "images": [
+        "/images/Sweater.jpg"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "inventory": {
+        "S": 5,
+        "M": 7,
+        "L": 4
+      },
       "description": "Oversized crochet cardigan in purple and white patchwork."
     },
     {
@@ -50,14 +101,31 @@
       "name": "Crochet Baby Set",
       "slug": "crochet-baby-set",
       "category": "Kids",
-      "occasions": ["casual", "gift", "everyday"],
-      "colors": ["orange", "blue", "purple", "grey"],
+      "occasions": [
+        "casual",
+        "gift",
+        "everyday"
+      ],
+      "colors": [
+        "orange",
+        "blue",
+        "purple",
+        "grey"
+      ],
       "price": 2800,
       "currency": "KES",
       "bestseller": false,
-      "images": ["/images/babyset1.jpg"],
-      "sizes": ["0-6M", "6-12M"],
-      "inventory": { "0-6M": 8, "6-12M": 6 },
+      "images": [
+        "/images/babyset1.jpg"
+      ],
+      "sizes": [
+        "0-6M",
+        "6-12M"
+      ],
+      "inventory": {
+        "0-6M": 8,
+        "6-12M": 6
+      },
       "description": "Handmade crochet baby set featuring a colorful patchwork cardigan and matching hat with bear ears."
     },
     {
@@ -65,14 +133,30 @@
       "name": "Colorful Baby Set",
       "slug": "colorful-baby-set",
       "category": "Kids",
-      "occasions": ["gift", "casual"],
-      "colors": ["orange", "blue", "purple", "grey"],
+      "occasions": [
+        "gift",
+        "casual"
+      ],
+      "colors": [
+        "orange",
+        "blue",
+        "purple",
+        "grey"
+      ],
       "price": 3000,
       "currency": "KES",
       "bestseller": false,
-      "images": ["/images/babyset1.jpg"],
-      "sizes": ["0-6M", "6-12M"],
-      "inventory": { "0-6M": 6, "6-12M": 5 },
+      "images": [
+        "/images/babyset1.jpg"
+      ],
+      "sizes": [
+        "0-6M",
+        "6-12M"
+      ],
+      "inventory": {
+        "0-6M": 6,
+        "6-12M": 5
+      },
       "description": "Colorful handmade crochet baby cardigan with buttons and a matching cap."
     },
     {
@@ -80,14 +164,30 @@
       "name": "Patchwork Baby Outfit",
       "slug": "patchwork-baby-outfit",
       "category": "Kids",
-      "occasions": ["gift", "everyday"],
-      "colors": ["green", "yellow", "purple", "pink"],
+      "occasions": [
+        "gift",
+        "everyday"
+      ],
+      "colors": [
+        "green",
+        "yellow",
+        "purple",
+        "pink"
+      ],
       "price": 3200,
       "currency": "KES",
       "bestseller": false,
-      "images": ["/images/babyset2.jpg"],
-      "sizes": ["0-6M", "6-12M"],
-      "inventory": { "0-6M": 5, "6-12M": 4 },
+      "images": [
+        "/images/babyset2.jpg"
+      ],
+      "sizes": [
+        "0-6M",
+        "6-12M"
+      ],
+      "inventory": {
+        "0-6M": 5,
+        "6-12M": 4
+      },
       "description": "Bright patchwork crochet baby outfit with hat and fun playful motifs."
     },
     {
@@ -95,14 +195,31 @@
       "name": "Striped Crochet Hoodie",
       "slug": "striped-crochet-hoodie",
       "category": "Kids",
-      "occasions": ["casual", "gift"],
-      "colors": ["purple", "orange", "yellow"],
+      "occasions": [
+        "casual",
+        "gift"
+      ],
+      "colors": [
+        "purple",
+        "orange",
+        "yellow"
+      ],
       "price": 3500,
       "currency": "KES",
       "bestseller": false,
-      "images": ["/images/kidswoody.jpg"],
-      "sizes": ["2Y", "3Y", "4Y"],
-      "inventory": { "2Y": 4, "3Y": 3, "4Y": 2 },
+      "images": [
+        "/images/kidswoody.jpg"
+      ],
+      "sizes": [
+        "2Y",
+        "3Y",
+        "4Y"
+      ],
+      "inventory": {
+        "2Y": 4,
+        "3Y": 3,
+        "4Y": 2
+      },
       "description": "Crochet hoodie in striped purple, white, yellow, and orange colors."
     },
     {
@@ -110,14 +227,29 @@
       "name": "Orange Crochet Dress & Hat",
       "slug": "orange-crochet-dress-hat",
       "category": "Dresses",
-      "occasions": ["runway", "summer"],
-      "colors": ["orange"],
+      "occasions": [
+        "runway",
+        "summer"
+      ],
+      "colors": [
+        "orange"
+      ],
       "price": 6200,
       "currency": "KES",
       "bestseller": true,
-      "images": ["/images/dress1.jpg"],
-      "sizes": ["S", "M", "L"],
-      "inventory": { "S": 2, "M": 5, "L": 2 },
+      "images": [
+        "/images/dress1.jpg"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "inventory": {
+        "S": 2,
+        "M": 5,
+        "L": 2
+      },
       "description": "Bold orange crochet halter dress with matching bucket hat."
     },
     {
@@ -125,18 +257,34 @@
       "name": "Blue Star Crochet Set",
       "slug": "blue-star-crochet-set",
       "category": "Sets",
-      "occasions": ["runway", "summer", "festival"],
-      "colors": ["blue", "white"],
+      "occasions": [
+        "runway",
+        "summer",
+        "festival"
+      ],
+      "colors": [
+        "blue",
+        "white"
+      ],
       "price": 7000,
       "currency": "KES",
       "bestseller": true,
-      "images": ["/images/twopiece.jpg"],
-      "sizes": ["S", "M", "L"],
-      "inventory": { "S": 3, "M": 3, "L": 2 },
+      "images": [
+        "/images/twopiece.jpg"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "inventory": {
+        "S": 3,
+        "M": 3,
+        "L": 2
+      },
       "description": "Blue crochet pants and crop top set with bold white star accents."
     }
   ],
-
   "about": {
     "title": "About YarnlyChic",
     "hero": "/images/hero.jpg",
@@ -146,6 +294,255 @@
     "halve": "/images/runway2.jpg",
     "founderName": "Cherrylyn Chepkoech"
   },
-
-  "orders": []
+  "orders": [
+    {
+      "items": [
+        {
+          "id": 1,
+          "name": "Blue Knit Shoulder Bag",
+          "price": 1500,
+          "quantity": 1
+        }
+      ],
+      "pricing": {
+        "subtotal": 1500,
+        "shipping": 150,
+        "total": 1650,
+        "currency": "KES"
+      },
+      "shippingMethod": {
+        "id": "cbd",
+        "name": "CBD Collection point",
+        "desc": "(1-3 business days after completion)",
+        "price": 150
+      },
+      "payment": {
+        "method": "mpesa-pochi",
+        "pochiNumber": "0716044996",
+        "mpesaCode": "TIMHG5DU3H"
+      },
+      "customer": {
+        "firstName": "Frankincense",
+        "lastName": "Okwemba",
+        "phone": "0745411366",
+        "address": "Seasons",
+        "city": "Nairobi",
+        "email": "frankincense.okwemba@student.moringaschool.com",
+        "country": "Kenya",
+        "saveInfo": true
+      },
+      "note": "",
+      "createdAt": "2025-09-23T05:54:03.607Z",
+      "status": "pending_verification",
+      "id": 1
+    },
+    {
+      "items": [
+        {
+          "id": 1,
+          "name": "Blue Knit Shoulder Bag",
+          "price": 1500,
+          "quantity": 1
+        }
+      ],
+      "pricing": {
+        "subtotal": 1500,
+        "shipping": 150,
+        "total": 1650,
+        "currency": "KES"
+      },
+      "shippingMethod": {
+        "id": "cbd",
+        "name": "CBD Collection point",
+        "desc": "(1-3 business days after completion)",
+        "price": 150
+      },
+      "payment": {
+        "method": "mpesa-pochi",
+        "pochiNumber": "0716044996",
+        "mpesaCode": "TIMHG5DU3H"
+      },
+      "customer": {
+        "firstName": "Frankincense",
+        "lastName": "Wesley",
+        "phone": "0745411366",
+        "address": "Seasons",
+        "city": "Nairobi",
+        "email": "frankincense.okwemba@student.moringaschool.com",
+        "country": "Kenya",
+        "saveInfo": false
+      },
+      "note": "",
+      "createdAt": "2025-09-23T06:06:35.817Z",
+      "status": "pending_verification",
+      "id": 2
+    },
+    {
+      "items": [
+        {
+          "id": 1,
+          "name": "Blue Knit Shoulder Bag",
+          "price": 1500,
+          "quantity": 1
+        }
+      ],
+      "pricing": {
+        "subtotal": 1500,
+        "shipping": 150,
+        "total": 1650,
+        "currency": "KES"
+      },
+      "shippingMethod": {
+        "id": "cbd",
+        "name": "CBD Collection point",
+        "desc": "(1-3 business days after completion)",
+        "price": 150
+      },
+      "payment": {
+        "method": "mpesa-pochi",
+        "pochiNumber": "0716044996",
+        "mpesaCode": "TIMHG5DU3H"
+      },
+      "customer": {
+        "firstName": "Frankincense",
+        "lastName": "Wesley",
+        "phone": "+254745411366",
+        "address": "Seasons",
+        "city": "Nairobi",
+        "email": "frankincensew@gmail.com",
+        "country": "Kenya",
+        "saveInfo": false
+      },
+      "note": "",
+      "createdAt": "2025-09-23T06:09:35.799Z",
+      "status": "pending_verification",
+      "id": 3
+    },
+    {
+      "items": [
+        {
+          "id": 9,
+          "name": "Blue Star Crochet Set",
+          "price": 7000,
+          "quantity": 1,
+          "image": "http://localhost:3000/images/twopiece.jpg"
+        }
+      ],
+      "pricing": {
+        "subtotal": 7000,
+        "shipping": 150,
+        "total": 7150,
+        "currency": "KES"
+      },
+      "shippingMethod": {
+        "id": "cbd",
+        "name": "CBD Collection point",
+        "desc": "(1-3 business days after completion)",
+        "price": 150
+      },
+      "payment": {
+        "method": "mpesa-pochi",
+        "pochiNumber": "0716044996",
+        "mpesaCode": "TINHG5FR6E"
+      },
+      "customer": {
+        "firstName": "Frankincense",
+        "lastName": "Wesley",
+        "phone": "0745411366",
+        "address": "Seasons",
+        "city": "Nairobi",
+        "email": "frankincensew@gmail.com",
+        "country": "Kenya",
+        "saveInfo": false
+      },
+      "note": "",
+      "createdAt": "2025-09-23T06:20:21.572Z",
+      "status": "pending_verification",
+      "id": 4
+    },
+    {
+      "items": [
+        {
+          "id": 9,
+          "name": "Blue Star Crochet Set",
+          "price": 7000,
+          "quantity": 1,
+          "image": "http://localhost:3000/images/twopiece.jpg"
+        }
+      ],
+      "pricing": {
+        "subtotal": 7000,
+        "shipping": 150,
+        "total": 7150,
+        "currency": "KES"
+      },
+      "shippingMethod": {
+        "id": "cbd",
+        "name": "CBD Collection point",
+        "desc": "(1-3 business days after completion)",
+        "price": 150
+      },
+      "payment": {
+        "method": "mpesa-pochi",
+        "pochiNumber": "0716044996",
+        "mpesaCode": "tinhg5fr6e"
+      },
+      "customer": {
+        "firstName": "Frankincense",
+        "lastName": "Wesley",
+        "phone": "0745411366",
+        "address": "Seasons",
+        "city": "Nairobi",
+        "email": "frankincensew@gmail.com",
+        "country": "Kenya",
+        "saveInfo": false
+      },
+      "note": "",
+      "createdAt": "2025-09-23T06:22:25.591Z",
+      "status": "pending_verification",
+      "id": 5
+    },
+    {
+      "items": [
+        {
+          "id": 1,
+          "name": "Blue Knit Shoulder Bag",
+          "price": 1500,
+          "quantity": 1,
+          "image": "http://localhost:3000/images/bag1.jpg"
+        }
+      ],
+      "pricing": {
+        "subtotal": 1500,
+        "shipping": 150,
+        "total": 1650,
+        "currency": "KES"
+      },
+      "shippingMethod": {
+        "id": "cbd",
+        "name": "CBD Collection point",
+        "desc": "(1-3 business days after completion)",
+        "price": 150
+      },
+      "payment": {
+        "method": "mpesa-pochi",
+        "pochiNumber": "0716044996",
+        "mpesaCode": "qab12xyz1"
+      },
+      "customer": {
+        "firstName": "Doreen",
+        "lastName": "Oloo",
+        "phone": "0123456789",
+        "address": "Ngong lane plaza",
+        "city": "Kilini",
+        "email": "dorineoloo100@gmail.com",
+        "country": "Kenya",
+        "saveInfo": true
+      },
+      "note": "",
+      "createdAt": "2025-10-01T14:10:45.425Z",
+      "status": "pending_verification",
+      "id": 6
+    }
+  ]
 }
