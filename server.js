@@ -24,8 +24,6 @@ server.use('/images', express.static(path.join(__dirname, 'images')));
 server.get('/', (_req, res) => res.send('OK'));
 server.get('/health', (_req, res) => res.json({ status: 'ok' }));
 
-
-
 const {
   GMAIL_USER,
   GMAIL_PASS,
@@ -81,7 +79,7 @@ server.post('/send-order-email', async (req, res) => {
     }
 
     const hostUrl = getHostUrl(req);
-
+    console.log(order.items)
     // Compose rows for the emails
     const rowsOwner = (order.items || []).map(item => `
       <tr>
