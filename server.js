@@ -1,11 +1,10 @@
 // server.js
 require('dotenv').config();
 
-const jsonServer = require('json-server');
-const express   = require('express');
-const cors      = require('cors');
-const path      = require('path');
-const nodemailer = require('nodemailer');
+const jsonServer  = require('json-server');
+const express     = require('express');
+const cors        = require('cors');
+const path        = require('path');
 
 const server = jsonServer.create();
 const router = jsonServer.router(path.join(__dirname, 'db.json'));
@@ -25,47 +24,59 @@ server.get('/', (_req, res) => res.send('OK'));
 server.get('/health', (_req, res) => res.json({ status: 'ok' }));
 
 const {
-  GMAIL_USER,
-  GMAIL_PASS,
+  MAILTRAP_API_TOKEN,     // Mailtrap → Email Sending → API tokens
+  FROM_EMAIL,             
   OWNER_EMAIL,
   API_URL,
   PORT = 3000,
 } = process.env;
 
-
-let transporter = null;
-if (GMAIL_USER && GMAIL_PASS) {
-  transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: { user: GMAIL_USER, pass: GMAIL_PASS },
-  });
-
-  transporter.verify()
-    .then(() => console.log('SMTP: ready'))
-    .catch(err => console.error('SMTP: failed to verify', err));
-} else {
-  console.warn('⚠️  Email not configured: set GMAIL_USER and GMAIL_PASS in .env');
+// ---- Minimal fetch guard (Node 18+ has global fetch) ----
+if (typeof fetch !== 'function') {
+  throw new Error('Global fetch is not available. Please run on Node 18+ or 20+.');
 }
 
-
+// ---- Helpers ----
 function getHostUrl(req) {
-  
   if (API_URL && API_URL.trim()) return API_URL.trim();
   return `${req.protocol}://${req.get('host')}`;
 }
 
-
 function buildImageSrc(image, hostUrl) {
   if (!image) return '';
   const s = String(image);
-  
   if (/^https?:\/\//i.test(s)) return s;
-
-  
-  const file = s.replace(/^\/?images\/?/i, ''); 
+  const file = s.replace(/^\/?images\/?/i, '');
   return `${hostUrl}/images/${file}`;
+}
+
+// ---- Mail sender (Mailtrap Email API over HTTPS) ----
+async function sendEmail({ from, to, subject, html, text, name = 'Yarnly Chic' }) {
+  if (!MAILTRAP_API_TOKEN) {
+    throw new Error('MAILTRAP_API_TOKEN missing. Set it in environment variables.');
+  }
+
+  const payload = {
+    from: { email: from, name },
+    to: (Array.isArray(to) ? to : [to]).map(e => ({ email: e })),
+    subject,
+    html,
+    text
+  };
+
+  const resp = await fetch('https://send.api.mailtrap.io/api/send', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Api-Token ${MAILTRAP_API_TOKEN}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  });
+
+  if (!resp.ok) {
+    const body = await resp.text().catch(() => '');
+    throw new Error(`Mailtrap API error ${resp.status}: ${body}`);
+  }
 }
 
 // ---- Email endpoint ----
@@ -74,13 +85,9 @@ server.post('/send-order-email', async (req, res) => {
     const { order } = req.body || {};
     if (!order) return res.status(400).json({ error: 'Missing order' });
 
-    if (!transporter) {
-      return res.status(500).json({ error: 'Email not configured on server' });
-    }
-
     const hostUrl = getHostUrl(req);
-    console.log(order.items)
-    // Compose rows for the emails
+
+    // rows for owner email
     const rowsOwner = (order.items || []).map(item => `
       <tr>
         <td style="padding:8px;border-bottom:1px solid #ddd;">${item.name}</td>
@@ -92,6 +99,7 @@ server.post('/send-order-email', async (req, res) => {
       </tr>
     `).join('');
 
+    // rows for customer email
     const rowsCustomer = (order.items || []).map(item => `
       <tr>
         <td style="padding:8px;border-bottom:1px solid #ddd;">
@@ -172,20 +180,23 @@ server.post('/send-order-email', async (req, res) => {
       </div>
     `;
 
-    // ---- Send emails ----
-    const ownerTo = (OWNER_EMAIL && /@/.test(OWNER_EMAIL)) ? OWNER_EMAIL : GMAIL_USER;
+    // ---- Send emails via Mailtrap API ----
+    const fromAddr = FROM_EMAIL || 'no-reply@yarnlychic.test';
+    const ownerTo  = (OWNER_EMAIL && /@/.test(OWNER_EMAIL)) ? OWNER_EMAIL : fromAddr;
 
-    await transporter.sendMail({
-      from: GMAIL_USER,
+    // Owner notification
+    await sendEmail({
+      from: fromAddr,
       to: ownerTo,
       subject: `New Order ${order.id ? `#${order.id}` : ''}`,
       html: ownerHtml,
       text: 'Please view this email in HTML format.'
     });
 
+    // Customer confirmation
     if (order.customer?.email) {
-      await transporter.sendMail({
-        from: `Yarnly Chic <${GMAIL_USER}>`,
+      await sendEmail({
+        from: fromAddr,
         to: order.customer.email,
         subject: `Your Order Confirmation ${order.id ? `#${order.id}` : ''}`,
         html: customerHtml,
@@ -196,10 +207,9 @@ server.post('/send-order-email', async (req, res) => {
     res.json({ ok: true });
   } catch (e) {
     console.error('Email error:', e);
-    res.status(500).json({ error: 'Email failed' });
+    res.status(500).json({ error: 'Email failed', details: String(e.message || e) });
   }
 });
-
 
 server.use(middlewares);
 server.use(router);

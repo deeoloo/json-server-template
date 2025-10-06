@@ -9,6 +9,7 @@
     "seed": "cp db/seeds.json db/db.json"
   },
   "dependencies": {
+    "@sendgrid/mail": "^8.1.5",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "json-server": "^0.16.3",
